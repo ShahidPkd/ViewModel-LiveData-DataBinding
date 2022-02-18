@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="mainViewModelssss"
+            type="com.demo.viewmodellivedatadatabinding.MainViewModel" />
+
+    </data>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="50dp"
+      android:gravity="center"
+      android:orientation="vertical">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="#E63030"
+          android:id="@+id/text"
+          android:text="@{mainViewModelssss.currentQuotes}"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:weightSum="2">
+
+          <Button
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_margin="20dp"
+              android:layout_height="wrap_content"
+              android:text="Pre Quotes"
+              android:onClick="@{()-> mainViewModelssss.preQuotes()}"
+              android:id="@+id/prebtn"/>
+          <Button
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_margin="20dp"
+              android:onClick="@{()-> mainViewModelssss.updateQuotes()}"
+              android:layout_height="wrap_content"
+              android:text="Next Quotes"
+              android:id="@+id/nextBtn"/>
+
+
+
+      </LinearLayout>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="30dp"
+          android:text="Or Swipe Left Or Right"
+          android:textColor="#A6A6A6"/>
+
+  </LinearLayout>
+
+
+</layout>
