@@ -13,13 +13,18 @@ class MainViewModel : ViewModel() {
 
     val currentQuotes = MutableLiveData("")
 
+
+
+    // initializing data
     fun listAdd(){
-//        list.add("hi")
+
         for (i in 0..15){
             list.add("name: "+i)
 
         }
     }
+
+    //increate count value and whenever increase we set value to out live data
     fun updateQuotes(){
         if (list.size-1 == count){
             count = 0
@@ -34,10 +39,13 @@ class MainViewModel : ViewModel() {
         }
 
     }
+
+    // call for setting initial value
     fun onLoading(){
         currentQuotes.value = list.get(0)
     }
 
+    // decrease a value for pre data and call
     fun preQuotes() {
         if (count == 0) {
             count = list.size-1
@@ -47,5 +55,9 @@ class MainViewModel : ViewModel() {
             currentQuotes.value = list[count]
 
         }
+    }
+
+    fun addingData(){
+
     }
 }

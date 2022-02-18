@@ -28,11 +28,12 @@ class MainActivity : AppCompatActivity(), GestureDetector.OnGestureListener  {
         mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
         mainViewModel.listAdd()
         mainViewModel.onLoading()
-        binding.mainViewModelssss = mainViewModel
+        binding.mainViewModelName = mainViewModel
         binding.lifecycleOwner = this
 
 
 
+        // this is for swip left and right to change data
         gestureDetector = GestureDetector(this)
     }
 
